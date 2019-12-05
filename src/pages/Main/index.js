@@ -45,7 +45,7 @@ export default class Main extends Component {
     try {
       const { newRepo, repositories } = this.state;
 
-      if (newRepo === '') throw alert('vazio');
+      if (newRepo === '') throw alert('Digite um repositorio');
 
       const newRepoFind = repositories.find(r => r.name === newRepo);
 
@@ -88,7 +88,7 @@ export default class Main extends Component {
 
           <SubmitButton loading={loading}>
             {loading ? (
-              <FaSpinner color="FFF" size={14} />
+              <FaSpinner color="#FFF" size={14} />
             ) : (
               <FaPlus color="#FFF" size={14} />
             )}
